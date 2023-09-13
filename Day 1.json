@@ -1,0 +1,502 @@
+[
+    {
+      "question": "What does the 'use' hook in React allow you to do?",
+      "options": [
+        "Read the value of a resource like a Promise or context.",
+        "Update the state of a component.",
+        "Add side effects to functional components.",
+        "Combine multiple states into one."
+      ],
+      "answer": "Read the value of a resource like a Promise or context."
+    },
+    {
+      "question": "Which of the following is true about the 'use' hook?",
+      "options": [
+        "It can only be called at the top level of a component.",
+        "It can be called within loops and conditional statements.",
+        "It can be called outside of a component or hook.",
+        "It does not integrate with Suspense."
+      ],
+      "answer": "It can be called within loops and conditional statements."
+    },
+    {
+      "question": "What does the 'use' hook return when called with a Promise?",
+      "options": [
+        "The Promise itself.",
+        "The rejected value of the Promise.",
+        "The resolved value of the Promise or context.",
+        "A callback function to handle the Promise."
+      ],
+      "answer": "The resolved value of the Promise or context."
+    },
+    {
+      "question": "When fetching data in a Server Component, which is preferred?",
+      "options": [
+        "Using 'use' hook.",
+        "Using 'async' and 'await'.",
+        "Using 'setState'.",
+        "Using 'useEffect'."
+      ],
+      "answer": "Using 'async' and 'await'."
+    },
+    {
+      "question": "How does 'use' behave when passed a context?",
+      "options": [
+        "It returns the context provider's value.",
+        "It creates a new context.",
+        "It updates the context value.",
+        "It deletes the context."
+      ],
+      "answer": "It returns the context provider's value."
+    },
+    {
+      "question": "What is the main advantage of 'use' over 'useContext'?",
+      "options": [
+        "It can be called inside conditionals and loops.",
+        "It provides better performance.",
+        "It can create new contexts.",
+        "It can update context values."
+      ],
+      "answer": "It can be called inside conditionals and loops."
+    },
+    {
+      "question": "How should you handle rejected Promises with the 'use' hook?",
+      "options": [
+        "Using a try-catch block.",
+        "Using 'Promise.catch'.",
+        "Using 'Promise.resolve'.",
+        "Ignoring them."
+      ],
+      "answer": "Using 'Promise.catch'."
+    },
+    {
+      "question": "What is the main purpose of an error boundary in the context of the 'use' hook?",
+      "options": [
+        "To catch errors from rejected Promises.",
+        "To enhance performance.",
+        "To create new contexts.",
+        "To update context values."
+      ],
+      "answer": "To catch errors from rejected Promises."
+    },
+    {
+      "question": "Where should the 'use' hook be called?",
+      "options": [
+        "Outside a React component or Hook function.",
+        "Inside a try-catch block.",
+        "Inside a React component or Hook function.",
+        "Inside an event handler."
+      ],
+      "answer": "Inside a React component or Hook function."
+    },
+    {
+      "question": "What does the 'Suspense Exception: This is not a real error!' message indicate?",
+      "options": [
+        "'use' is being called outside of a React component or Hook.",
+        "There's a syntax error in the code.",
+        "The Promise passed to 'use' was rejected.",
+        "The 'use' hook is deprecated."
+      ],
+      "answer": "'use' is being called outside of a React component or Hook."
+    },
+    {
+    "question": "What does the `useCallback` hook in React allow you to do?",
+    "options": [
+      "Cache a function definition between re-renders.",
+      "Cache the result of a function call.",
+      "Delay the execution of a function.",
+      "Execute a function only once."
+    ],
+    "answer": "Cache a function definition between re-renders."
+  },
+  {
+    "question": "What is the first parameter of `useCallback`?",
+    "options": [
+      "The function value you want to cache.",
+      "The list of dependencies.",
+      "The initial value of the function.",
+      "The context in which the function is executed."
+    ],
+    "answer": "The function value you want to cache."
+  },
+  {
+    "question": "What is the purpose of the dependency array in `useCallback`?",
+    "options": [
+      "To specify the number of times the function should be cached.",
+      "To list all reactive values referenced inside the function code.",
+      "To delay the execution of the function.",
+      "To specify the context in which the function should be executed."
+    ],
+    "answer": "To list all reactive values referenced inside the function code."
+  },
+  {
+    "question": "What does `useCallback` return during the initial render?",
+    "options": [
+      "The cached function from the previous render.",
+      "The function you have passed.",
+      "A new instance of the function.",
+      "Undefined."
+    ],
+    "answer": "The function you have passed."
+  },
+  {
+    "question": "Where can you call `useCallback`?",
+    "options": [
+      "Inside loops or conditions.",
+      "Only at the top level of your component or your own Hooks.",
+      "Inside other hooks like `useEffect`.",
+      "Anywhere in the component."
+    ],
+    "answer": "Only at the top level of your component or your own Hooks."
+  },
+  {
+    "question": "Why might you need `useCallback` when passing a function to a component wrapped in `memo`?",
+    "options": [
+      "To ensure the component always re-renders.",
+      "To ensure the function is always a new instance.",
+      "To cache the function between re-renders until its dependencies change.",
+      "To delay the execution of the function."
+    ],
+    "answer": "To cache the function between re-renders until its dependencies change."
+  },
+  {
+    "question": "What does the `useMemo` hook do in relation to `useCallback`?",
+    "options": [
+      "It caches the function itself.",
+      "It caches the result of calling your function.",
+      "It delays the execution of the function.",
+      "It ensures the function is executed only once."
+    ],
+    "answer": "It caches the result of calling your function."
+  },
+  {
+    "question": "In which scenario is caching a function with `useCallback` valuable?",
+    "options": [
+      "When the function is used inside a loop.",
+      "When the function is passed as a prop to a component wrapped in `memo`.",
+      "When the function is used inside an event handler.",
+      "When the function is used as a default parameter."
+    ],
+    "answer": "When the function is passed as a prop to a component wrapped in `memo`."
+  },
+  {
+    "question": "How can you prevent an Effect from firing too often?",
+    "options": [
+      "By using `useEffect` without dependencies.",
+      "By calling the function inside `useEffect` without `useCallback`.",
+      "By wrapping the function you need to call from an Effect into `useCallback`.",
+      "By using `useMemo` inside `useEffect`."
+    ],
+    "answer": "By wrapping the function you need to call from an Effect into `useCallback`."
+  },
+  {
+    "question": "What should you do if every time your component renders, `useCallback` returns a different function?",
+    "options": [
+      "Remove the dependency array.",
+      "Add more dependencies to the array.",
+      "Ensure you've specified the dependency array as a second argument.",
+      "Use `useMemo` instead of `useCallback`."
+    ],
+    "answer": "Ensure you've specified the dependency array as a second argument."
+  },
+  {
+    "question": "What does the `useContext` hook in React allow you to do?",
+    "options": [
+      "Read and subscribe to context from your component.",
+      "Update the context value.",
+      "Create a new context.",
+      "Remove a context from the component tree."
+    ],
+    "answer": "Read and subscribe to context from your component."
+  },
+  {
+    "question": "What does `useContext(SomeContext)` return if there's no matching provider in the parent tree?",
+    "options": [
+      "The value passed to the closest SomeContext.Provider.",
+      "The defaultValue you have passed to createContext.",
+      "null",
+      "undefined"
+    ],
+    "answer": "The defaultValue you have passed to createContext."
+  },
+  {
+    "question": "What should be the position of the `useContext()` call in a component?",
+    "options": [
+      "Inside loops or conditions.",
+      "Only at the top level of your component or your own Hooks.",
+      "Inside other hooks like `useEffect`.",
+      "Anywhere in the component."
+    ],
+    "answer": "Only at the top level of your component or your own Hooks."
+  },
+  {
+    "question": "Which of the following is a parameter for `useContext`?",
+    "options": [
+      "The initial value of the context.",
+      "The list of dependencies.",
+      "The context that you’ve previously created with createContext.",
+      "The current value of the context."
+    ],
+    "answer": "The context that you’ve previously created with createContext."
+  },
+  {
+    "question": "What does `useContext` return if there's a matching provider but no value is specified?",
+    "options": [
+      "The defaultValue from createContext.",
+      "null",
+      "undefined",
+      "An empty object."
+    ],
+    "answer": "undefined"
+  },
+  {
+    "question": "How does React determine the value returned by `useContext`?",
+    "options": [
+      "It uses the global context value.",
+      "It uses the value passed to the closest SomeContext.Provider above the calling component.",
+      "It uses the value from the root component.",
+      "It uses the value from the nearest sibling component."
+    ],
+    "answer": "It uses the value passed to the closest SomeContext.Provider above the calling component."
+  },
+  {
+    "question": "How can you override the context for a specific part of the component tree?",
+    "options": [
+      "By using multiple useContext calls.",
+      "By wrapping that part in a provider with a different value.",
+      "By using a different context.",
+      "By using the `overrideContext` hook."
+    ],
+    "answer": "By wrapping that part in a provider with a different value."
+  },
+  {
+    "question": "What happens if you have a provider without a value in the tree?",
+    "options": [
+      "It uses the global context value.",
+      "It throws an error.",
+      "It's equivalent to passing value={undefined}.",
+      "It uses the value from the nearest sibling provider."
+    ],
+    "answer": "It's equivalent to passing value={undefined}."
+  },
+  {
+    "question": "Which hook can be combined with `useContext` to update the context value over time?",
+    "options": [
+      "useEffect",
+      "useMemo",
+      "useState",
+      "useReducer"
+    ],
+    "answer": "useState"
+  },
+  {
+    "question": "What does `useContext` do when combined with `createContext`?",
+    "options": [
+      "It creates a new context.",
+      "It updates the context value.",
+      "It reads the current value of the context.",
+      "It removes the context from the component tree."
+    ],
+    "answer": "It reads the current value of the context."
+  },
+    {
+    "question": "What is the primary purpose of the `useDebugValue` hook in React?",
+    "options": [
+      "To debug React components.",
+      "To add a label to a custom Hook in React DevTools.",
+      "To display error messages.",
+      "To log values to the console."
+    ],
+    "answer": "To add a label to a custom Hook in React DevTools."
+  },
+  {
+    "question": "Where should you call `useDebugValue` in a custom Hook?",
+    "options": [
+      "Inside loops or conditions.",
+      "Only at the top level of your custom Hook.",
+      "Inside other hooks like `useEffect`.",
+      "Anywhere in the custom Hook."
+    ],
+    "answer": "Only at the top level of your custom Hook."
+  },
+  {
+    "question": "What does `useDebugValue` return?",
+    "options": [
+      "The debug value.",
+      "The formatted debug value.",
+      "Nothing.",
+      "A function to format the debug value."
+    ],
+    "answer": "Nothing."
+  },
+  {
+    "question": "What can the optional `format` parameter in `useDebugValue` be used for?",
+    "options": [
+      "To specify the type of the debug value.",
+      "To delay the execution of the debug value.",
+      "To format the debug value when inspected.",
+      "To specify the context in which the debug value should be displayed."
+    ],
+    "answer": "To format the debug value when inspected."
+  },
+  {
+    "question": "Why might you want to use a formatting function with `useDebugValue`?",
+    "options": [
+      "To avoid running potentially expensive formatting logic unless the component is inspected.",
+      "To ensure the debug value is always a string.",
+      "To cache the debug value between re-renders.",
+      "To delay the execution of the debug value."
+    ],
+    "answer": "To avoid running potentially expensive formatting logic unless the component is inspected."
+  },
+  {
+    "question": "What does the `useDebugValue` hook display in React DevTools without any formatting?",
+    "options": [
+      "The name of the custom Hook.",
+      "The original value itself.",
+      "A default label.",
+      "A placeholder value."
+    ],
+    "answer": "The original value itself."
+  },
+  {
+    "question": "In the example provided, what label is given to components calling `useOnlineStatus`?",
+    "options": [
+      "OnlineStatus: true",
+      "OnlineStatus: \"Online\"",
+      "Online",
+      "OnlineStatus: false"
+    ],
+    "answer": "OnlineStatus: \"Online\""
+  },
+  {
+    "question": "For which type of custom Hooks is adding debug values most valuable?",
+    "options": [
+      "Hooks that update frequently.",
+      "Hooks that are part of shared libraries and have a complex internal data structure.",
+      "Hooks that use external APIs.",
+      "Hooks that have a simple return value."
+    ],
+    "answer": "Hooks that are part of shared libraries and have a complex internal data structure."
+  },
+  {
+    "question": "What does the `useDebugValue(date, date => date.toDateString())` code do?",
+    "options": [
+      "It displays the current date in React DevTools.",
+      "It formats the date value to a string representation when inspected.",
+      "It caches the date value between re-renders.",
+      "It delays the execution of the date value."
+    ],
+    "answer": "It formats the date value to a string representation when inspected."
+  },
+  {
+    "question": "What is the main advantage of using a formatting function with `useDebugValue`?",
+    "options": [
+      "It ensures the debug value is always displayed.",
+      "It provides better performance.",
+      "It caches the debug value.",
+      "It allows for conditional rendering of the debug value."
+    ],
+    "answer": "It provides better performance."
+  },
+  {
+    "question": "What is the primary purpose of the `useDeferredValue` hook in React?",
+    "options": [
+      "To defer network requests.",
+      "To delay the execution of functions.",
+      "To defer updating a part of the UI.",
+      "To cache values between re-renders."
+    ],
+    "answer": "To defer updating a part of the UI."
+  },
+  {
+    "question": "Where should you call `useDeferredValue` in your component?",
+    "options": [
+      "Inside loops or conditions.",
+      "Only at the top level of your component.",
+      "Inside other hooks like `useEffect`.",
+      "Anywhere in the component."
+    ],
+    "answer": "Only at the top level of your component."
+  },
+  {
+    "question": "What type of values should you pass to `useDeferredValue`?",
+    "options": [
+      "Only primitive values.",
+      "Only objects created during rendering.",
+      "Only objects created outside of rendering.",
+      "Both primitive values and objects created outside of rendering."
+    ],
+    "answer": "Both primitive values and objects created outside of rendering."
+  },
+  {
+    "question": "What happens when `useDeferredValue` receives a different value?",
+    "options": [
+      "It immediately re-renders with the new value.",
+      "It schedules a re-render in the background with the new value.",
+      "It caches the new value for future use.",
+      "It ignores the new value."
+    ],
+    "answer": "It schedules a re-render in the background with the new value."
+  },
+  {
+    "question": "How is `useDeferredValue` integrated with `<Suspense>`?",
+    "options": [
+      "It triggers the fallback UI.",
+      "It prevents the fallback UI from showing.",
+      "It delays the rendering of the fallback UI.",
+      "It has no integration with `<Suspense>`."
+    ],
+    "answer": "It prevents the fallback UI from showing."
+  },
+  {
+    "question": "Does `useDeferredValue` prevent extra network requests?",
+    "options": [
+      "Yes, it caches network responses.",
+      "No, it does not prevent extra network requests.",
+      "Yes, it debounces network requests.",
+      "It depends on how it's used."
+    ],
+    "answer": "No, it does not prevent extra network requests."
+  },
+  {
+    "question": "What is the main advantage of using `useDeferredValue` over debouncing or throttling?",
+    "options": [
+      "It requires choosing a fixed delay.",
+      "It is deeply integrated with React and adapts to the user’s device.",
+      "It reduces the number of re-renders.",
+      "It caches values for faster access."
+    ],
+    "answer": "It is deeply integrated with React and adapts to the user’s device."
+  },
+  {
+    "question": "How does `useDeferredValue` handle updates caused by events?",
+    "options": [
+      "It blocks the updates until the deferred value is updated.",
+      "It prioritizes the updates over the background re-render.",
+      "It delays the updates by a fixed amount of time.",
+      "It caches the updates for future use."
+    ],
+    "answer": "It prioritizes the updates over the background re-render."
+  },
+  {
+    "question": "When using `useDeferredValue`, what happens during the initial render?",
+    "options": [
+      "The deferred value is different from the value provided.",
+      "The deferred value is the same as the value provided.",
+      "The deferred value is null.",
+      "The deferred value is undefined."
+    ],
+    "answer": "The deferred value is the same as the value provided."
+  },
+  {
+    "question": "In the context of `useDeferredValue`, what does 'deferred' mean?",
+    "options": [
+      "The value is stored for future use.",
+      "The value is delayed by a fixed amount of time.",
+      "The value “lags behind” the latest value.",
+      "The value is cached for faster access."
+    ],
+    "answer": "The value “lags behind” the latest value."
+  }
+  ]
