@@ -121,7 +121,7 @@
 
         function loadQuizData() {
             const selectedDay = document.getElementById('day-select').value;
-            fetch(selectedDay)
+            fetch(`./QuizData/${selectedDay}`)
                 .then(response => response.json())
                 .then(data => {
                     questions = data;
@@ -192,7 +192,7 @@
         }
         function exportJson() {
             const selectedDay = document.getElementById('day-select').value;
-            fetch(selectedDay)
+            fetch(`./QuizData/${selectedDay}`)
                 .then(response => response.json())
                 .then(data => {
                     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
